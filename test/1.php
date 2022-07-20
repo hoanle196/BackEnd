@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $password = 123456;
 echo "<br> ma hoa 1 :".md5( $password )."<br>";
 
@@ -14,7 +15,7 @@ if($pass)
 else{
           echo("sai mat khau");
 }
-exit();
+// exit();
 $passmh = substr(rand(0,999999),0,8);
 $new = password_hash($passmh,PASSWORD_BCRYPT);
 
@@ -69,3 +70,5 @@ foreach($arr as $value)
           $sum3 += $value;
 }
 echo $sum3;
+$_SESSION['success'] = "Da tao session";
+echo session_id();

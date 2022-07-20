@@ -97,7 +97,6 @@
 					val: valEl
 				}, function(data) {
 					$('.result').html(data);
-
 					$('.result p').click(function() {
 					var a =($(this).text());
 					$('[type=text]').val(a);

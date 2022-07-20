@@ -30,12 +30,15 @@ if (isset($_POST['submit'])) {
                               // exit;
                               if($result)
                               {
-                                        echo "them moi thanh cong";
+                                        // echo "them moi thanh cong";
+                                        $_SESSION['success']= "Thêm mới thành công !";
                                         header('location:index.php');
                                         exit;
                               }
                               else {
-                                        echo "them moi that bai";
+                                        // echo "them moi that bai";
+                                        $_SESSION['error']= "Thêm mới thất bại !".$conn->error;
+
                                           header('location:create.php');
                                           exit;
 

@@ -8,7 +8,7 @@ require '../layout/header.php';
                               <div class="col-md-5">
                                         <div class="form-group">
                                                   <label>Tên</label>
-                                                  <input type="text" name="name" class="form-control" placeholder="Tên của bạn">
+                                                  <input type="text" name="name" class="form-control" placeholder="Tên của bạn" required name="name">
                                                   <?php if (isset($error)) { ?>
                                                             <div id="loiten" class="alert alert-danger mt-2"><?php echo $loiten; ?></div>
                                                   <?php } ?>

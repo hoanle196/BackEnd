@@ -1,8 +1,32 @@
-.active {
-	background-color: yellow !important;
-	color: red !important;
-}
-
-label {
-	font-weight: normal;
-}
+            .active {
+                background-color: yellow !important;
+                color: red !important;
+            }
+            
+            label {
+                font-weight: normal;
+            }
+            
+            .container.wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .abc {
+                height: 400px;
+            }
+            
+            .search {
+                display: inline-block;
+                float: right;
+                margin-bottom: 30px;
+            }
+            
+             ::placeholder {
+                color: #6f6f6f;
+                font-style: italic;
+            }
+            
+            input.form-control {
+                margin-right: 5px;
+            }

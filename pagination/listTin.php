@@ -11,21 +11,10 @@ if (isset($_GET["pageNum"])) {
 $starrow = ($pageNum - 1) * $pageSize;
 // echo $starrow;
 $sql = "SELECT count(*) FROM tin";
-$ob = $conn->prepare($sql);
-$ob->execute();
-//$obj = $conn->prepare($sql);
-//$obj->execute();
-//$a = $obj->fetchColumn();
-echo '<pre>';
-print_r($ob);
-//print_r($a);
-echo '</pre>';
-// var_dump($ob->rowCount());
-// exit();
-// $arr = $ob->fetchColumn();
-$arr = $ob->rowCount();
- var_dump($arr);      
-
+$obj = $conn->query($sql);
+// var_dump($obj);     
+$arr = $obj->fetchColumn();
+// var_dump($arr);
 
 $tongtin = (int)$arr;
 $tongtrang = ceil($tongtin / $pageSize);
